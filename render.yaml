@@ -1,0 +1,10 @@
+services:
+  - type: web
+    name: discord-1024bot
+    runtime: python
+    buildCommand: pip install -r requirements.txt
+    startCommand: python main.py
+    plan: free
+    envVars:
+      - key: DISCORD_TOKEN
+        sync: false # トークンはRenderの管理画面から直接手動で入力します
